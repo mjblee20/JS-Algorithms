@@ -1,2 +1,3 @@
-# LeetCodeDaily
-A daily practice of LeetCode problems. 
+# JS-Algorithm/Problems
+
+A daily practice of solving JavaScript coding problems.
