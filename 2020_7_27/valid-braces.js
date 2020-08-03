@@ -19,7 +19,7 @@ function validBraces(braces){
         return false;
       }
     }    
-    // checks the rest, since i != 0 it either matches the bracket in the array or it doesn't. if it doesn't check if it's an open bracket 
+    // check the rest, since i != 0 it either matches the bracket in the array or it doesn't. if it doesn't check if it's an open bracket 
     else {
     // If encounter open brackets add to array with array.push() adding to the end of array
       if (list[i] === '(' || list[i] === '{' || list[i] === '[') {

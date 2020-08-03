@@ -14,9 +14,10 @@ function sortArray(array) {
   let result = []
 
   // filter the array of odd numbers
-  // since 0 is a faulty number and positive numbers are truthy, below line creates a new array with only odd numbers
+  // NOTE: since 0 is a faulty number and positive numbers are truthy, below line creates a new array with only odd numbers
   let oddNum = array.filter(num => num % 2)
   // This sorts the odd numbers in the array in an ascending order
+  // NOTE: this is a formula found from online for ascending sort
   let sortedOdd = oddNum.sort((a, b) => a - b)
   // keeps track of which odd number has been added in the sorted odd array
   let oddTracker = 0;

@@ -1,7 +1,7 @@
 # JS-Algorithm/Problems
 
 A daily practice of solving JavaScript coding problems.
-These coding problems are from LeetCode and Codewars.
+These coding problems are from LeetCode, freeCodeCamp and Codewars.
 
 ## Process
 The process of tackling these problems is to comment out every step required to achieve the result first then write out the lines of code that performs each comment.
@@ -11,3 +11,6 @@ There are times when I truly have no idea how to tackle a problem because I'm no
 
 Key Point: NEVER copy and paste. 
 
+## Goals
+
+1. Do at least one challenge problem per day.
