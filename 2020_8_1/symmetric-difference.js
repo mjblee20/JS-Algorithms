@@ -8,29 +8,39 @@
 
 function sym() {
   // Hint 1: The arguments object is Array-like object that only inherits Array.length property. Hence consider converting it to an actual Array.
+
+  // Hint 2: Deem writing a helper function that returns the symmetric difference of two arrays on each call instead of attempting to difference all sets simultaneously.
+
+  // Hint 3: Apply helper function against the created arguments array reducing its elements pairwise recursively to form the expected output.
   
-  // set the starting array to be equivalent to the first one
-  let result = []; 
-
-  // go through every array in arguments
+  let args = []
+  // go through every array in arguments and add it to args
   for (let i = 0; i < arguments.length; i++) {
-    // iterate the args[] array and check if the result contains the number
-    for (let j = 0; j < arguments[i].length; j++) {
-
-      // if result contains arguments[i][j]
-      if (result.includes(arguments[i][j])) {
-        // remove element at index j which is the one that was included in the args[i] array
-        result.splice(result.indexOf(arguments[i][j]), 1);
-      } 
-      
-      // if the args[i] array contains a number that doesn't exist in the result array add it
-      else {
-        result.push(arguments[i][j]);
-      }
-    }
+    args.push(arguments[i]);
   }
 
-  return result;
+  const arrayDiff = (arr1, arr2) => {
+    let result = [];
+
+    // check if if the first array 
+    arr1.forEach((item) => {
+      // if index of the item is < 0 (AKA -1) means the arrays do not contain the item
+      if(arr2.indexOf(item) < 0 && result.indexOf(item) < 0) {
+        result.push(item);
+      }
+    })
+    arr2.forEach((item) => {
+      // if index of the item is < 0 (AKA -1) means the arrays do not contain the item
+      if(arr1.indexOf(item) < 0 && result.indexOf(item) < 0) {
+        result.push(item);
+      }
+    })
+
+    return result;
+  }
+
+  // Looked up this part.
+  return args.reduce(arrayDiff);
 }
 
 console.log(sym([1, 2, 3], [5, 2, 1, 4]));
