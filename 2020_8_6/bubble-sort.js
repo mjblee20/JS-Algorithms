@@ -2,7 +2,7 @@
 
 
 // NOTE: large number will be move to the end first.
-function bubbleSort(arr) {
+function myBubbleSort(arr) {
   let toBeSorted = arr;
   let result = [];
   const sort = (array) => {
@@ -34,12 +34,12 @@ function bubbleSort(arr) {
   console.log("FINISHED: ", result);
   return result;
 }
+// console.time('myBubbleSort');
+// myBubbleSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92, 4, 5, 6, 2, 4, 5, 34, 24, 234, 52435, 2345, 3452345, 345, 345,234, 34562, 62463, 36, 36646, 64352, 3453, 365, 3453, 76, 45, 568, 4683, 567, 5683, 765, 83, 90, 32]);
+// console.timeEnd('myBubbleSort');
 
-console.time('bubbleSort');
-bubbleSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92, 4, 5, 6, 2, 4, 5, 34, 24, 234, 52435, 2345, 3452345, 345, 345,234, 34562, 62463, 36, 36646, 64352, 3453, 365, 3453, 76, 45, 568, 4683, 567, 5683, 765, 83, 90, 32]);
-console.timeEnd('bubbleSort');
 
-
+// BETTER BubbleSort
 let bubbleSort2 = (inputArr) => {
   let len = inputArr.length;
   for (let i = 0; i < len; i++) {
@@ -50,11 +50,12 @@ let bubbleSort2 = (inputArr) => {
               inputArr[j + 1] = tmp;
           }
       }
+      console.log(inputArr);
   }
   return inputArr;
 };
 console.time('bubbleSort2');
-bubbleSort2([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92, 4, 5, 6, 2, 4, 5, 34, 24, 234, 52435, 2345, 3452345, 345, 345,234, 34562, 62463, 36, 36646, 64352, 3453, 365, 3453, 76, 45, 568, 4683, 567, 5683, 765, 83, 90, 32]);
+bubbleSort2([1, 4, 2, 8, 345, 123, 43, 32]); //, 5643, 63, 123, 43, 2, 55, 1, 234, 92, 4, 5, 6, 2, 4, 5, 34, 24, 234, 52435, 2345, 3452345, 345, 345,234, 34562, 62463, 36, 36646, 64352, 3453, 365, 3453, 76, 45, 568, 4683, 567, 5683, 765, 83, 90, 32
 console.timeEnd('bubbleSort2');
 
 // FASTEST
@@ -74,6 +75,6 @@ let bubbleSort3 = (inputArr) => {
   } while (swapped);
   return inputArr;
 };
-console.time('bubbleSort3');
-bubbleSort3([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92, 4, 5, 6, 2, 4, 5, 34, 24, 234, 52435, 2345, 3452345, 345, 345,234, 34562, 62463, 36, 36646, 64352, 3453, 365, 3453, 76, 45, 568, 4683, 567, 5683, 765, 83, 90, 32]);
-console.timeEnd('bubbleSort3');
+// console.time('bubbleSort3');
+// bubbleSort3([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92, 4, 5, 6, 2, 4, 5, 34, 24, 234, 52435, 2345, 3452345, 345, 345,234, 34562, 62463, 36, 36646, 64352, 3453, 365, 3453, 76, 45, 568, 4683, 567, 5683, 765, 83, 90, 32]);
+// console.timeEnd('bubbleSort3');
